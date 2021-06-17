@@ -1,3 +1,30 @@
 .login__wrapper {
-	height: 100vh;
+  height: 100vh;
 }
+
+.login__logo {
+  height: 3rem;
+  width: auto;
+}
+
+.login__column {
+  border-radius: 2%;
+}
+
+.login__register:hover {
+  color: inherit;
+}
+
+.register__wrapper {
+  height: 100vh;
+}
+
+.register__logo {
+  height: 3rem;
+  width: auto;
+}
+
+.register__column {
+  border-radius: 2%;
+}
+/*# sourceMappingURL=app.css.map */

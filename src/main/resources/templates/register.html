@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- css -->
+	<link th:href="@{'/libraries/bootstrap/css/bootstrap.min.css'}" rel="stylesheet">
+	<link rel="stylesheet" th:href="@{'/css/app.css'}">
+</head>
+<body>
+    <div class="register__wrapper bg-light d-flex justify-content-center align-items-center px-md-0 px-3">
+        <div class="register__column col-lg-4 col-md-8 col-12 bg-white shadow p-md-5 pb-md-4 p-4 pb-3">
+            <div class="d-flex justify-content-center mb-3">
+				<img class="login__logo" th:src="@{'/images/logo.png'}" alt="" srcset="">
+			</div>
+            <form action="/register" method="post">
+                <label for="email">Email Address</label>
+			    <input id="email" type="email" name="email" class="form-control" placeholder="enter your email address" />
+			    <label for="password" class="mt-2">Password</label>
+			    <input id="password" type="password" name="password" class="form-control" placeholder="enter password" />
+			    <button class="btn btn-dark mt-2">Register</button>
+            </form>
+            <p class="text-primary text-center mt-3">
+				<a class="text-decoration-none login__register" href="/">Already have an account? Login here.</a>
+			</p>
+        </div>
+    </div>
+</body>
+</html>
