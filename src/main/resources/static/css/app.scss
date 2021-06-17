@@ -29,3 +29,16 @@
         border-radius: 2%;
     }
 }
+
+
+.admin {
+    &__navbar {
+        &__logo {
+            height: 3rem;
+            width: auto;
+        }
+    }
+    &__wrapper {
+        height: 100vh;
+    }
+}

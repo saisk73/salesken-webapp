@@ -27,4 +27,13 @@
 .register__column {
   border-radius: 2%;
 }
+
+.admin__navbar__logo {
+  height: 3rem;
+  width: auto;
+}
+
+.admin__wrapper {
+  height: 100vh;
+}
 /*# sourceMappingURL=app.css.map */

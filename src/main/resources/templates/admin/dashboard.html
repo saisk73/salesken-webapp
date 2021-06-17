@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- css -->
+	<link th:href="@{'/libraries/bootstrap/css/bootstrap.min.css'}" rel="stylesheet">
+	<link rel="stylesheet" th:href="@{'/css/app.css'}">
+</head>
+<body>
+    <div class="admin__wrapper d-flex">
+        <div th:replace="/admin/components/sidebar"></div>
+        <div class="w-100">
+            <div th:replace="/admin/components/navbar"></div>
+            <div class="w-100">
+                <h1>Dashboard</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

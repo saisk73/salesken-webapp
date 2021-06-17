@@ -31,7 +31,6 @@ public class LoginController {
 	public String loginPost(HttpServletRequest request) {
 		String email = request.getParameter("email");
 		String password = request.getParameter("password");
-		System.out.println(email + " " + password);
 		User userData = userRepository.findOneByEmail(email);
 		if(userData == null) {
 			return "redirect:/";
