@@ -12,10 +12,59 @@
 <body>
     <div class="admin__wrapper d-flex">
         <!-- sidebar -->
-        <div th:replace="/admin/components/sidebar"></div>
+        <div id="admin-sidebar" class="admin__sidebar bg-dark py-3">
+            <div class="px-3">
+                <img class="admin__sidebar__logo" th:src="@{/images/logo-white.webp}" alt="logo" />
+                <!-- user -->
+                <div class="admin__sidebar__user d-flex mt-3 p-3">
+                    <div class="col-4 admin__sidebar__user__image__wrapper d-flex">
+                        <img class="admin__sidebar__user__image" src="/images/user.png" alt="user" />
+                        <span class="admin__sidebar__user__status mt-auto"></span>
+                    </div>
+                    <div class="col-7 ps-2">
+                        <p class="admin__sidebar__user__name fw-normal text-white mb-0">Sai Kiran Reddy</p>
+                        <p class="admin__sidebar__user__role text-white mb-0">Role</p>
+                    </div>
+                </div>
+            </div>
+            <!-- navigation -->
+            <div class="admin__sidebar__navigation mt-3">
+                <h5 class="fw-normal text-secondary ps-3">Navigation</h5>
+                <div class="admin__sidebar__navigation__link admin__sidebar__navigation__link__active d-flex justify-content-between p-2 px-3">
+                    <h6 class="text-white fw-normal my-auto">Dashboard</h6>
+                    <span class="admin__sidebar__navigation__link__icon">
+                        <img th:src="@{/images/icons/arrow_right.svg}" alt="arrow" />
+                    </span>
+                </div>
+                <div th:each="row : ${#numbers.sequence( 1, 6, 1)}" class="admin__sidebar__navigation__link d-flex justify-content-between p-2 px-3">
+                    <h6 class="text-white fw-normal align-items-center">
+                        Link 
+                        <span th:text="${row}"></span>
+                    </h6>
+                    <span class="admin__sidebar__navigation__link__icon d-none">
+                        <img th:src="@{/images/icons/arrow_right.svg}" alt="arrow" />
+                    </span>
+                </div>
+            </div>
+        </div>
         <div class="w-100">
             <!-- navbar -->
-            <div th:replace="/admin/components/navbar"></div>
+            <div class="w-100 d-flex bg-white shadow-lg px-3 py-2">
+                <button onclick="toggleSidebar()" class="cursor__pointer border-0 bg-transparent">
+                    <img src="/images/icons/menu.svg" alt="menu" />
+                </button>
+                <div class="ms-auto">
+                    <button class="cursor__pointer border-0 bg-transparent">
+                        <img src="/images/icons/notifications.svg" alt="notifications" />
+                    </button>
+                    <div class="d-inline-block">
+                        <button class="cursor__pointer border-0 bg-transparent">
+                            <img class="admin__navbar__userImage" src="/images/user.png" alt="user" />
+                            <img src="/images/icons/expand_more.svg" alt="down" />
+                        </button>
+                    </div>
+                </div>
+            </div>
             <!-- content -->
             <div class="admin__content w-100 p-4">
                 <!-- breadcrumb -->
